@@ -6,7 +6,7 @@
 /*   By: jquince <jquince@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 21:45:19 by jquince           #+#    #+#             */
-/*   Updated: 2020/03/04 03:03:36 by jquince          ###   ########.fr       */
+/*   Updated: 2020/03/04 20:00:21 by jquince          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,15 +172,64 @@ void ft_terme_du_pret(){
         cin.clear();
         cin.ignore(1000, '\n');
     }
-
-    temps = (log(somme_finale) + log(somme_initiale)) / log(1 + pourcentage_de_placement);
+    double logSomF = log(somme_finale);
+    double logSomI = log(somme_initiale);
+    double logPourc = log(1 + pourcentage_de_placement);
+    temps = (logSomF + logSomI) / logPourc;
 
     cout << "La valeure initiale est: " << temps << " An(s)" << endl;
     
 }
-// int ft_interet_de_placement(){
-    
-// }
+
+void ft_interet_de_placement(){
+    double somme_initiale;
+    float temps; 
+    double pourcentage_de_placement;
+    double somme_finale;
+
+    cout << "Entrer la somme initiale: " ;
+    cin >> somme_initiale;
+
+    while (somme_initiale <= 0)
+    {
+        system("clear"); // If you have a windows computer use System("cls")
+        cout << "Vous avez fais une erreure, rentrer a nouvau la somme initiale: " ;
+        cin >> somme_initiale;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
+
+    cout << "Entrer la somme finale: " ;
+    cin >> somme_finale;
+
+    while (somme_finale <= 0)
+    {
+        system("clear"); // If you have a windows computer use System("cls")
+        cout << "Vous avez fais une erreure, rentrer a nouvau la somme finale: " ;
+        cin >> somme_finale;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
+
+
+    cout << "Entrer le temps de votre placement en Nombre annee: " ;
+    cin >> temps;
+
+    while (temps <= 0)
+    {
+        system("clear"); // If you have a windows computer use System("cls")
+        cout << "Vous avez fais une erreure, rentrer a nouvau le temps de votre placement: " ;
+        cin >> temps;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
+   double resulSom = somme_finale/somme_initiale;
+   float tmps = 1/temps;
+   pourcentage_de_placement = pow(resulSom, tmps) ;
+
+    cout << "Le pourcentage de placement est: " << (pourcentage_de_placement - 1) * 100  << " %" << endl;
+
+}
 
 int main(){
     int choice;
@@ -210,7 +259,7 @@ int main(){
         ft_terme_du_pret();
         break;
      case 4:
-         cout << "Interet du placement" << endl;
+         ft_interet_de_placement();
          break;
      }
     
