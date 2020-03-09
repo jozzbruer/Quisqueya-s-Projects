@@ -6,7 +6,7 @@
 /*   By: jquince <jquince@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 21:45:19 by jquince           #+#    #+#             */
-/*   Updated: 2020/03/05 19:53:48 by jquince          ###   ########.fr       */
+/*   Updated: 2020/03/08 20:05:37 by jquince          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,21 @@ void ft_valeur_acquise(){
     printf ("Entrer la somme initiale: ") ;
     scanf ("%i", &somme_initiale);
 
-    // while (somme_initiale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("Vous avez fais une erreure, rentrer a nouvau la somme initiale: ") ;
-    //     scanf ("%i",&somme_initiale);
-    // }
+    while (somme_initiale <= 0)
+    {
+        system("clear"); // If you have a windows computer use System("cls")
+        printf ("Vous avez fais une erreure, rentrer a nouvau la somme initiale: ") ;
+        scanf ("%i",&somme_initiale);
+    }
 
     printf ( "Entrer le temps de votre placement en Nombre annee: ") ;
     scanf ("%i", &temps);
 
-    // while (temps <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("Vous avez fais une erreure, rentrer a nouvau le temps de votre placement: " );
-    //     scanf ("%d", &temps);
-    // }
 
     printf ("Entrer le pourcentage de placement: ") ;
     scanf ("%lf", &pourcentage_de_placement);
 
-    // while (pourcentage_de_placement <= 0 || pourcentage_de_placement > 1 )
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ( "Vous avez fais une erreure, rentrer a nouvau votre pourcentage: ") ;
-    //     scanf ("%lf", &pourcentage_de_placement);
-    // }
+   
 
     somme_finale = somme_initiale * pow((1 + pourcentage_de_placement), temps);
 
@@ -84,32 +73,17 @@ void ft_placement_initial(){
     printf ("Entrer la somme finale: ") ;
     scanf ("%lf", &somme_finale);
 
-    // while (somme_finale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("Vous avez fais une erreure, rentrer a nouvau la somme finale: " );
-    //     scanf ("%lf", &somme_finale);
-    // }
+    
 
     printf ("%s", "Entrer le temps de votre placement en Nombre annee: ") ;
     scanf ("%d", &temps);
 
-    // while (temps <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau le temps de votre placement: ") ;
-    //     scanf ("%d", &temps);
-    // }
+    
 
     printf ("%s", "Entrer le pourcentage de placement: ") ;
     scanf ("%lf", &pourcentage_de_placement);
 
-    // while (pourcentage_de_placement <= 0 || pourcentage_de_placement > 1 )
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("Vous avez fais une erreure, rentrer a nouvau votre pourcentage: ") ;
-    //     scanf ("%lf", &pourcentage_de_placement);
-    // }
+   
 
     somme_initiale = somme_finale * pow((1 + pourcentage_de_placement), - temps);
 
@@ -126,33 +100,18 @@ void ft_terme_du_pret(){
     printf ("%s", "Entrer la somme initiale: " );
     scanf ("%lf",&somme_initiale);
 
-    // while (somme_initiale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("Vous avez fais une erreure, rentrer a nouvau la somme initiale: ") ;
-    //     scanf ("%lf",&somme_initiale);
-    // }
+  
 
     printf ("%s", "Entrer la somme finale: " );
     scanf ("%lf",&somme_finale);
 
-    // while (somme_finale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau la somme finale: ") ;
-    //     scanf ("%lf",&somme_finale);
-    // }
+
 
 
     printf ("%s", "Entrer le pourcentage de placement: ") ;
      scanf ("%lf",&pourcentage_de_placement);
 
-    // while (pourcentage_de_placement <= 0 || pourcentage_de_placement > 1 )
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau votre pourcentage: " );
-    //     scanf ("%lf",&pourcentage_de_placement);
-    // }
+  
     double logSomF = log(somme_finale);
     double logSomI = log(somme_initiale);
     double logPourc = log(1 + pourcentage_de_placement);
@@ -171,33 +130,13 @@ void ft_interet_de_placement(){
     printf ("%s", "Entrer la somme initiale: ") ;
     scanf ("%lf",&somme_initiale);
 
-    // while (somme_initiale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau la somme initiale: " );
-    //     scanf ("%lf",&somme_initiale);
-    // }
 
     printf ("%s", "Entrer la somme finale: ") ;
     scanf ("%lf",&somme_finale);
 
-    // while (somme_finale <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau la somme finale: " );
-    //     scanf ("%lf",&somme_finale);
-    // }
-
 
     printf ("%s", "Entrer le temps de votre placement en Nombre annee: ") ;
     scanf ("%f", &temps);
-
-    // while (temps <= 0)
-    // {
-    //     system("clear"); // If you have a windows computer use System("cls")
-    //     printf ("%s", "Vous avez fais une erreure, rentrer a nouvau le temps de votre placement: ") ;
-    //     scanf ("%f", &temps);
-    // }
    double resulSom = somme_finale/somme_initiale;
    float tmps = 1/temps;
    pourcentage_de_placement = pow(resulSom, tmps) ;
@@ -207,19 +146,22 @@ void ft_interet_de_placement(){
 }
 
 int main(){
-    int choice;
+    char *choice;
+    int input;
         ft_menu();
         printf ("Pressez le chiffre de vrotre choix: ") ;
-        scanf ("%d",&choice);
-    //  while (!check_input(choice)){
-    //      system("clear"); // If you use a windows computer replace "clear" by "cls"
-    //      ft_menu();
-    //     printf ("Erreur, vous avez entrez un mauvais chiffre \n");
-    //     printf ( "Pressez le chiffre de votre ch");
-    //     scanf ("%d",&choice);
-    // }
+        scanf ("%s",choice);
+        input = atoi(choice);
+     while (!check_input(input)){
+         system("clear"); // If you use a windows computer replace "clear" by "cls"
+        ft_menu();
+        printf (" Erreur, vous avez entrez un mauvais chiffre \n\n");
+        printf ( "Pressez le chiffre de votre choix: ");
+        scanf ("%s",choice);
+        input = atoi(choice);
+    }
     
-     switch (choice)
+     switch (input)
      {
      case 1:
          /* code */
